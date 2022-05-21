@@ -68,30 +68,30 @@ int main(int argc, char* argv[])
     while(1)
     {
     	if(strcmp(argv[1],"-h")&&strcmp(argv[1],"-w")&&strcmp(argv[1],"-c"))
-    		{
+    	{
             	printf("没有该功能\n!提示!\n-w 读出单词数量\n-c 读出字符数量\n"); 
             	return 0;
-    		}
-		if(!strcmp(argv[1],"-h"))
-    		{
-		    	printf("\n-w 读出单词数量\n-c 读出字符数量\n");
-		    	return 0;
-			}
+    	}
+	if(!strcmp(argv[1],"-h"))
+    	{
+		printf("\n-w 读出单词数量\n-c 读出字符数量\n");
+		return 0;
+	}
         if((fp=fopen(argv[2],"r"))==NULL)
-        	{  
-        		printf("没有该文件\n\n\n");
-        		scanf("%s%s%s",argv[0],argv[1],argv[2]);
-        		continue;
-        	}
+        {  
+        	printf("没有该文件\n\n\n");
+        	scanf("%s%s%s",argv[0],argv[1],argv[2]);
+        	continue;
+        }
         else if(!strcmp(argv[1],"-w")) 
-        	{ 
-        		CountW(argv[2]);                
-        	} 
-		else if(!strcmp(argv[1],"-c"))  
-        	{ 
-				CountC(argv[2]);     
-        	} 
-		printf("\n\n");
+        { 
+        	CountW(argv[2]);                
+        } 
+	else if(!strcmp(argv[1],"-c"))  
+        { 
+		CountC(argv[2]);     
+        } 
+	printf("\n\n");
         scanf("%s%s%s",argv[0],argv[1],argv[2]);
     }
     return 0;
